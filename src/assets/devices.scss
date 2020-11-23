@@ -1,0 +1,18 @@
+$iphoneX: url('../../public/img/iphone_x.png');
+$pixel4: url('../../public/img/pixel_4.png');
+
+.device {
+
+    &.iphone_x {
+        width: 436px;
+        height: 886px;
+        background-image: $iphoneX;
+    }
+
+    &.pixel_4 {
+        width: 431px;
+        height: 921px;
+        background-image: $pixel4;
+    }
+
+}

@@ -1,0 +1,68 @@
+@import '../variables';
+
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url("../../../public/font/ProductSans-Regular.woff") format("opentype");
+}
+
+.pixel_4 {
+    font-family: 'Product Sans Regular', sans-serif;
+
+    .notification {
+        position: absolute;
+        top: 45.6%;
+        left: 4.6%;
+
+        width: 83.8%;
+        height: 68px;
+
+        padding: 15px;
+        border-radius: 5px;
+        background-color: $white;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        color: #565656;
+
+        .application-icon {
+            width: 20px;
+            height: 20px;
+
+            background-color: $black;
+            border-radius: 3px;
+        }
+
+        .application-name {
+            margin-left: 10px;
+        }
+
+        .application-time-container {
+            margin-left: 10px;
+
+            .application-time-separator {
+                font-weight: bold;
+            }
+
+            .application-time {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .title {
+        display: flex;
+        margin-top: 10px;
+
+        color: $black;
+    }
+
+    .message {
+        display: flex;
+
+        color: #565656;
+    }
+}

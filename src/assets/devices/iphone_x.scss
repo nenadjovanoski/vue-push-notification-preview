@@ -1,0 +1,55 @@
+@import '../variables';
+
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url("../../../public/font/FontsFree-Net-SFProText-Regular.ttf") format("opentype");
+}
+
+.iphone_x {
+    font-family: 'SF Pro Text Regular', sans-serif;
+
+    .notification {
+        position: absolute;
+        top: 45.6%;
+        left: 6.8%;
+
+        width: 82.4%;
+        height: 53px;
+
+        padding: 8px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.60);
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        color: #444444;
+
+        .application-icon {
+            width: 20px;
+            height: 20px;
+
+            background-color: $white;
+            border-radius: 5px;
+        }
+
+        .application-name {
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .application-time {
+            margin-left: 194px;
+        }
+    }
+
+    .title {
+        display: flex;
+        margin-top: 10px;
+
+        color: $black;
+    }
+}
