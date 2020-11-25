@@ -13,42 +13,44 @@
         top: 45.6%;
         left: 6.8%;
 
-        width: 82.4%;
-        height: 53px;
+        width: 81.5%;
+        height: 35px;
 
         padding: 8px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.60);
+        border-radius: 9px;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .heading {
         display: flex;
         align-items: center;
 
-        font-size: 14px;
-        color: #444444;
+        font-size: 11px;
+        color: #676767;
 
         .application-icon {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
 
-            background-color: $white;
+            background-color: $black;
             border-radius: 5px;
         }
 
         .application-name {
-            margin-left: 10px;
+            margin-left: 5px;
             text-transform: uppercase;
         }
 
         .application-time {
-            margin-left: 194px;
+            position: absolute;
+            right: 15px;
         }
     }
 
     .title {
         display: flex;
-        margin-top: 10px;
+        margin-top: 5px;
+        font-size: 12px;
 
         color: $black;
     }

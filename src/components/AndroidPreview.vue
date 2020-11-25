@@ -28,15 +28,15 @@
                 </span>
             </div>
 
-            <span
-                class="title"
-                v-html="textTitle"
-            />
+<!--            <span-->
+<!--                class="title"-->
+<!--                v-html="textTitle"-->
+<!--            />-->
 
-            <span
-                class="message"
-                v-html="textMessage"
-            />
+<!--            <span-->
+<!--                class="message"-->
+<!--                v-html="textMessage"-->
+<!--            />-->
         </div>
     </div>
 </template>

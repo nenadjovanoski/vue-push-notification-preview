@@ -11,10 +11,10 @@
     .notification {
         position: absolute;
         top: 45.6%;
-        left: 4.6%;
+        left: 5.5%;
 
-        width: 83.8%;
-        height: 68px;
+        width: 79.4%;
+        height: 15px;
 
         padding: 15px;
         border-radius: 5px;
@@ -25,15 +25,15 @@
         display: flex;
         align-items: center;
 
-        font-size: 14px;
+        font-size: 12px;
         color: #565656;
 
         .application-icon {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
 
             background-color: $black;
-            border-radius: 3px;
+            border-radius: 50%;
         }
 
         .application-name {

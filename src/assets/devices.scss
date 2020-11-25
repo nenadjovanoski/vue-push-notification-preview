@@ -4,14 +4,14 @@ $pixel4: url('../../public/img/pixel_4.png');
 .device {
 
     &.iphone_x {
-        width: 436px;
-        height: 886px;
+        width: 300px;
+        height: 614px;
         background-image: $iphoneX;
     }
 
     &.pixel_4 {
-        width: 431px;
-        height: 921px;
+        width: 300px;
+        height: 644px;
         background-image: $pixel4;
     }
 
