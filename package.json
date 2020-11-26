@@ -1,7 +1,7 @@
 {
   "name": "vue-push-notification-preview",
   "description": "A library to preview the push notifications on iOS and Android devices",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Nenad Jovanoski",
   "license": "MIT",
   "keywords": [
@@ -10,17 +10,16 @@
     "push",
     "notification",
     "preview",
-    "device",
     "iphone",
     "android",
+    "device",
     "ios"
   ],
   "private": false,
   "main": "dist/vue-push-notification-preview.umd.min.js",
   "files": [
     "dist/*",
-    "src/*",
-    "public/*"
+    "src/components/*.vue"
   ],
   "unpkg": "dist/vue-push-notification-preview.umd.min.js",
   "jsdelivr": "dist/vue-push-notification-preview.umd.min.js",
@@ -32,11 +31,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
   "devDependencies": {
+    "vue": "^2.6.11",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.29.0",
