@@ -10,59 +10,110 @@
 
     .notification {
         position: absolute;
-        top: 45.6%;
+        top: 52%;
         left: 5.5%;
 
-        width: 79.4%;
-        height: 15px;
+        width: 79%;
+        min-height: 15px;
+        height: auto;
 
         padding: 15px;
         border-radius: 5px;
         background-color: $white;
-    }
 
-    .heading {
-        display: flex;
-        align-items: center;
+        .heading {
+            display: flex;
+            align-items: center;
 
-        font-size: 12px;
-        color: #565656;
+            font-size: 12px;
+            color: #565656;
 
-        .application-icon {
-            width: 15px;
-            height: 15px;
+            .application-icon {
+                width: 15px;
+                height: 15px;
 
-            background-color: $black;
-            border-radius: 50%;
-        }
-
-        .application-name {
-            margin-left: 10px;
-        }
-
-        .application-time-container {
-            margin-left: 10px;
-
-            .application-time-separator {
-                font-weight: bold;
+                background-color: $black;
+                border-radius: 50%;
             }
 
-            .application-time {
+            .application-name {
                 margin-left: 10px;
             }
+
+            .application-time-container {
+                margin-left: 10px;
+
+                .application-time-separator {
+                    font-weight: bold;
+                }
+
+                .application-time {
+                    margin-left: 10px;
+                }
+            }
         }
-    }
 
-    .title {
-        display: flex;
-        margin-top: 10px;
+        .content {
+            color: $black;
+            font-size: 13px;
+            margin-top: 10px;
 
-        color: $black;
-    }
+            .title {
+                display: flex;
+            }
+        }
 
-    .message {
-        display: flex;
+        &.light-mode {
+            &.expanded-mode {
+                .content {
+                    color: #3b3b3b;
 
-        color: #565656;
+                    .title {
+                        font-weight: bold;
+                    }
+
+                    .body {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        &.dark-mode {
+            background-color: $black;
+
+            .heading {
+                color: $white;
+
+                .application-icon {
+                    background-color: $white;
+                }
+            }
+
+            .content {
+                color: $white;
+            }
+
+            &.expanded-mode {
+                .content {
+                    .title {
+                        font-weight: bold;
+                    }
+
+                    .body {
+                        color: #e6e6e6;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+
     }
 }

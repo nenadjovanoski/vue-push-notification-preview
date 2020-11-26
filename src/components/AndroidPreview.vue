@@ -1,8 +1,8 @@
 <template>
-    <div
-        :class="['device', device]"
-    >
-        <div class="notification">
+    <div class="device pixel_4">
+        <div
+            :class="['notification', appearanceModeFormat, sizeModeFormat]"
+        >
             <div class="heading">
                 <span
                     class="application-icon"
@@ -28,21 +28,31 @@
                 </span>
             </div>
 
-<!--            <span-->
-<!--                class="title"-->
-<!--                v-html="textTitle"-->
-<!--            />-->
+            <div
+                v-if="hasTitle || textBody"
+                class="content"
+            >
+                <span
+                    v-if="hasTitle"
+                    class="title"
+                    v-html="textTitle"
+                />
 
-<!--            <span-->
-<!--                class="message"-->
-<!--                v-html="textMessage"-->
-<!--            />-->
+                <span
+                    v-if="hasBody"
+                    class="body"
+                    v-html="textBody"
+                />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    import { DEVICE } from '../constants/devices';
+    import {
+        APPEARANCE_MODE,
+        SIZE_MODE
+    } from '../constants/shared';
     import '@/assets/common.scss';
     import '@/assets/devices/pixel_4.scss';
 
@@ -50,12 +60,6 @@
         name: 'AndroidPreview',
 
         props: {
-            device: {
-                type: String,
-                default: DEVICE.PIXEL_4,
-                validator: value => Object.values(DEVICE).indexOf(value) !== -1
-            },
-
             textApplicationName: {
                 type: String,
                 default: 'App name'
@@ -63,17 +67,66 @@
 
             textTime: {
                 type: String,
-                default: '1h'
+                default: '1h',
+                validator: value => value.length < 4
             },
 
             textTitle: {
                 type: String,
-                default: 'Notification preview'
+                default: ''
             },
 
-            textMessage: {
+            textBody: {
                 type: String,
-                default: 'Preview your message text'
+                default: ''
+            },
+
+            sizeMode: {
+                type: String,
+                default: SIZE_MODE.INITIAL,
+                validator: value => Object.values(SIZE_MODE).indexOf(value) !== -1
+            },
+
+            appearanceMode: {
+                type: String,
+                default: APPEARANCE_MODE.LIGHT,
+                validator: value => Object.values(APPEARANCE_MODE).indexOf(value) !== -1
+            }
+        },
+
+        computed: {
+            appearanceModeFormat() {
+                switch (this.appearanceMode) {
+                    case APPEARANCE_MODE.LIGHT:
+                        return 'light-mode';
+
+                    case APPEARANCE_MODE.DARK:
+                        return 'dark-mode';
+
+                    default:
+                        throw new Error('Unrecognized appearance mode!');
+                }
+            },
+
+            sizeModeFormat() {
+                switch (this.sizeMode) {
+                    case SIZE_MODE.INITIAL:
+                        return 'initial-mode';
+
+                    case SIZE_MODE.EXPANDED:
+                        return 'expanded-mode';
+
+                    default:
+                        throw new Error('Unrecognized size mode!');
+                }
+            },
+
+            hasTitle() {
+                return this.textTitle !== '';
+            },
+
+            hasBody() {
+                return this.textBody !== '';
             }
         }
     }
