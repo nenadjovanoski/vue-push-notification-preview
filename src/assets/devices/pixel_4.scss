@@ -1,12 +1,7 @@
 @import '../variables';
 
-@font-face {
-    font-family: 'Product Sans Regular';
-    src: url("../../../public/font/ProductSans-Regular.woff") format("opentype");
-}
-
 .pixel_4 {
-    font-family: 'Product Sans Regular', sans-serif;
+    font-family: sans-serif;
 
     .notification {
         position: absolute;

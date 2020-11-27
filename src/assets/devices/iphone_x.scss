@@ -1,12 +1,7 @@
 @import '../variables';
 
-@font-face {
-    font-family: 'SF Pro Text Regular';
-    src: url("../../../public/font/FontsFree-Net-SFProText-Regular.ttf") format("opentype");
-}
-
 .iphone_x {
-    font-family: 'SF Pro Text Regular', sans-serif;
+    font-family: sans-serif;
 
     .notification {
         position: absolute;
