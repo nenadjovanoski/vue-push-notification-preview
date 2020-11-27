@@ -41,8 +41,6 @@
         APPEARANCE_MODE,
         SIZE_MODE
     } from '../constants/shared';
-    import '@/assets/common.scss';
-    import '@/assets/devices/iphone_x.scss';
 
     export default {
         name: 'IphonePreview',
@@ -119,3 +117,8 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    @import '../assets/common';
+    @import '../assets/devices/iphone_x';
+</style>

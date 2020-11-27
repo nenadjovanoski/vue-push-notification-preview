@@ -53,8 +53,6 @@
         APPEARANCE_MODE,
         SIZE_MODE
     } from '../constants/shared';
-    import '@/assets/common.scss';
-    import '@/assets/devices/pixel_4.scss';
 
     export default {
         name: 'AndroidPreview',
@@ -131,3 +129,8 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    @import '../assets/common';
+    @import '../assets/devices/pixel_4';
+</style>
