@@ -1,4 +1,2 @@
-import IphonePreview from './IphonePreview.vue';
-import AndroidPreview from './AndroidPreview.vue';
-
-export { IphonePreview, AndroidPreview };
+export { default as IphonePreview } from './IphonePreview.vue';
+export { default as AndroidPreview } from './AndroidPreview.vue';
