@@ -54,13 +54,14 @@
 </template>
 
 <script>
-    import {
-        APPEARANCE_MODE,
-        SIZE_MODE
-    } from '../constants/shared';
+    import { deviceMixin } from '../mixins/deviceMixin';
 
     export default {
         name: 'AndroidPreview',
+
+        mixins: [
+            deviceMixin
+        ],
 
         props: {
             textApplicationName: {
@@ -82,54 +83,6 @@
             textBody: {
                 type: String,
                 default: ''
-            },
-
-            sizeMode: {
-                type: String,
-                default: SIZE_MODE.INITIAL,
-                validator: value => Object.values(SIZE_MODE).indexOf(value) !== -1
-            },
-
-            appearanceMode: {
-                type: String,
-                default: APPEARANCE_MODE.LIGHT,
-                validator: value => Object.values(APPEARANCE_MODE).indexOf(value) !== -1
-            }
-        },
-
-        computed: {
-            appearanceModeFormat() {
-                switch (this.appearanceMode) {
-                    case APPEARANCE_MODE.LIGHT:
-                        return 'light-mode';
-
-                    case APPEARANCE_MODE.DARK:
-                        return 'dark-mode';
-
-                    default:
-                        throw new Error('Unrecognized appearance mode!');
-                }
-            },
-
-            sizeModeFormat() {
-                switch (this.sizeMode) {
-                    case SIZE_MODE.INITIAL:
-                        return 'initial-mode';
-
-                    case SIZE_MODE.EXPANDED:
-                        return 'expanded-mode';
-
-                    default:
-                        throw new Error('Unrecognized size mode!');
-                }
-            },
-
-            hasTitle() {
-                return this.textTitle !== '';
-            },
-
-            hasBody() {
-                return this.textBody !== '';
             }
         }
     }
