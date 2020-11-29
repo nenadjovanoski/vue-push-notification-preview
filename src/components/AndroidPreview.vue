@@ -1,48 +1,53 @@
 <template>
-    <div class="device pixel_4">
-        <div
-            :class="['notification', appearanceModeFormat, sizeModeFormat]"
-        >
-            <div class="heading">
-                <span
-                    class="application-icon"
-                />
-
-                <span
-                    class="application-name"
-                    v-html="textApplicationName"
-                />
-
-                <span
-                    class="application-time-container"
-                >
+    <div
+        :class="['vpnp-wrapper-pixel_4']"
+        :style="backgroundStyle"
+    >
+        <div class="vpnp-pixel_4">
+            <div
+                :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
+            >
+                <div class="vpnp-heading">
                     <span
-                        class="application-time-separator"
+                        class="vpnp-application-icon"
+                    />
+
+                    <span
+                        class="vpnp-application-name"
+                        v-html="textApplicationName"
+                    />
+
+                    <span
+                        class="vpnp-application-time-container"
+                    >
+                    <span
+                        class="vpnp-application-time-separator"
                         v-html="'&#183;'"
                     />
 
                     <span
-                        class="application-time"
+                        class="vpnp-application-time"
                         v-html="textTime"
                     />
                 </span>
-            </div>
+                </div>
 
-            <div
-                v-if="hasTitle || textBody"
-                class="content"
-            >
+                <div
+                    v-if="hasTitle || textBody"
+                    class="vpnp-content"
+                >
                 <span
                     v-if="hasTitle"
-                    class="title"
+                    class="vpnp-title"
                     v-html="textTitle"
                 />
 
-                <span
-                    v-if="hasBody"
-                    class="body"
-                    v-html="textBody"
-                />
+                    <span
+                        v-if="hasBody"
+                        class="vpnp-body"
+                        v-html="textBody"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -53,8 +58,6 @@
         APPEARANCE_MODE,
         SIZE_MODE
     } from '../constants/shared';
-    import '@/assets/common.scss';
-    import '@/assets/devices/pixel_4.scss';
 
     export default {
         name: 'AndroidPreview',
@@ -131,3 +134,8 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import '../assets/devices';
+    @import '../assets/devices/pixel_4';
+</style>

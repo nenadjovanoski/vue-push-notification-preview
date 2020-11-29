@@ -1,36 +1,41 @@
 <template>
-    <div class="device iphone_x">
-        <div
-            :class="['notification', appearanceModeFormat, sizeModeFormat]"
-        >
-            <div class="heading">
-                <span
-                    class="application-icon"
-                />
+    <div
+        :class="['vpnp-wrapper-iphone_x']"
+        :style="backgroundStyle"
+    >
+        <div class="vpnp-iphone_x">
+            <div
+                :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
+            >
+                <div class="vpnp-heading">
+                    <span
+                        class="vpnp-application-icon"
+                    />
 
-                <span
-                    class="application-name"
-                    v-html="textApplicationName"
-                />
+                    <span
+                        class="vpnp-application-name"
+                        v-html="textApplicationName"
+                    />
 
-                <span
-                    class="application-time"
-                    v-html="textTime"
-                />
-            </div>
+                    <span
+                        class="vpnp-application-time"
+                        v-html="textTime"
+                    />
+                </div>
 
-            <div class="content">
+                <div class="vpnp-content">
                 <span
                     v-if="hasTitle"
-                    class="title"
+                    class="vpnp-title"
                     v-html="textTitle"
                 />
 
-                <span
-                    v-if="hasBody"
-                    class="body"
-                    v-html="textBody"
-                />
+                    <span
+                        v-if="hasBody"
+                        class="vpnp-body"
+                        v-html="textBody"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -41,8 +46,6 @@
         APPEARANCE_MODE,
         SIZE_MODE
     } from '../constants/shared';
-    import '@/assets/common.scss';
-    import '@/assets/devices/iphone_x.scss';
 
     export default {
         name: 'IphonePreview',
@@ -119,3 +122,8 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import '../assets/devices';
+    @import '../assets/devices/iphone_x';
+</style>
