@@ -5,6 +5,12 @@
     >
         <div class="vpnp-iphone_x">
             <div
+                class="vpnp-header"
+            >
+                <slot name="header"></slot>
+            </div>
+
+            <div
                 :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
             >
                 <div class="vpnp-heading">

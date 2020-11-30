@@ -3,6 +3,12 @@
 .vpnp-iphone_x {
     font-family: sans-serif;
 
+    .vpnp-header {
+        position: absolute;
+        height: 45%;
+        width: 100%;
+    }
+
     .vpnp-notification {
         position: absolute;
         top: 45.6%;

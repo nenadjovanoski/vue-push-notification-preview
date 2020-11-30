@@ -5,6 +5,12 @@
     >
         <div class="vpnp-pixel_4">
             <div
+                class="vpnp-header"
+            >
+                <slot name="header"></slot>
+            </div>
+
+            <div
                 :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
             >
                 <div class="vpnp-heading">

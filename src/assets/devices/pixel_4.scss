@@ -3,6 +3,12 @@
 .vpnp-pixel_4 {
     font-family: sans-serif;
 
+    .vpnp-header {
+        position: absolute;
+        height: 51%;
+        width: 100%;
+    }
+
     .vpnp-notification {
         position: absolute;
         top: 52%;
