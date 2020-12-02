@@ -1,6 +1,9 @@
-export const DEVICE = Object.freeze({
-    IPHONE_X: 'iphone_x',
-    PIXEL_4: 'pixel_4'
+export const DEVICE_SIZE = Object.freeze({
+    IPHONE_X_HEIGHT: 614,
+    IPHONE_X_WIDTH: 300,
+
+    PIXEL_4_HEIGHT: 644,
+    PIXEL_4_WIDTH: 300
 });
 
 export const APPEARANCE_MODE = Object.freeze({

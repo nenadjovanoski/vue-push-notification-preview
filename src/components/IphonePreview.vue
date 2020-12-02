@@ -1,7 +1,7 @@
 <template>
     <div
         :class="['vpnp-wrapper-iphone_x']"
-        :style="backgroundStyle"
+        :style="[backgroundStyle, sizeStyle]"
     >
         <div class="vpnp-iphone_x">
             <div class="vpnp-content">
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+    import { DEVICE_SIZE } from '../constants/shared';
+
     import { deviceMixin } from '../mixins/deviceMixin';
 
     export default {
@@ -81,6 +83,20 @@
             textBody: {
                 type: String,
                 default: ''
+            },
+
+            height: {
+                type: Number,
+                default: DEVICE_SIZE.IPHONE_X_HEIGHT
+            }
+        },
+
+        computed: {
+            sizeStyle() {
+                return {
+                    height: `${this.height}px`,
+                    width: `${this.height * (DEVICE_SIZE.IPHONE_X_WIDTH / DEVICE_SIZE.IPHONE_X_HEIGHT)}px`
+                }
             }
         }
     }
