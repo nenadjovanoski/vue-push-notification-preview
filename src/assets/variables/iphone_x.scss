@@ -29,29 +29,13 @@ $vnpn-iphone_x-notification-application-icon-background-color: $black;
 $vnpn-iphone_x-notification-application-icon-border-radius: 5px;
 
 
-//-- NOTIFICATION APPLICATION NAME --//
-$vnpn-iphone_x-notification-application-name-font-size: $vnpn-iphone_x-notification-heading-font-size;
-$vnpn-iphone_x-notification-application-name-color: $vnpn-iphone_x-notification-heading-color;
-
-
-//-- NOTIFICATION TIME --//
-$vnpn-iphone_x-notification-time-font-size: $vnpn-iphone_x-notification-heading-font-size;
-$vnpn-iphone_x-notification-time-color: $vnpn-iphone_x-notification-heading-color;
-
-
 //-- NOTIFICATION CONTENT --//
 $vnpn-iphone_x-notification-content-font-size: 12px;
 $vnpn-iphone_x-notification-content-color: $black;
 
 
-//-- NOTIFICATION TITLE --//
-$vnpn-iphone_x-notification-title-font-size: $vnpn-iphone_x-notification-content-font-size;
-$vnpn-iphone_x-notification-title-color: $vnpn-iphone_x-notification-content-color;
-
-
 //-- NOTIFICATION BODY --//
-$vnpn-iphone_x-notification-body-font-size: $vnpn-iphone_x-notification-content-font-size;
-$vnpn-iphone_x-notification-body-color: $vnpn-iphone_x-notification-content-color;
+$vnpn-iphone_x-notification-body-line-clamp: 4;
 
 
 //-- DARK MODE: NOTIFICATION --//
@@ -66,25 +50,9 @@ $vnpn-iphone_x-notification-dark-mode-heading-color: #b1b1b1;
 $vnpn-iphone_x-notification-dark-mode-application-icon-background-color: $white;
 
 
-//-- DARK MODE: NOTIFICATION APPLICATION NAME --//
-$vnpn-iphone_x-notification-dark-mode-application-name-color: $vnpn-iphone_x-notification-dark-mode-heading-color;
-
-
 //-- DARK MODE: NOTIFICATION CONTENT --//
 $vnpn-iphone_x-notification-dark-mode-content-color: $white;
 
 
-//-- DARK MODE: NOTIFICATION TITLE --//
-$vnpn-iphone_x-notification-dark-mode-title-color: $vnpn-iphone_x-notification-dark-mode-content-color;
-
-
-//-- DARK MODE: NOTIFICATION BODY --//
-$vnpn-iphone_x-notification-dark-mode-body-color: $vnpn-iphone_x-notification-dark-mode-content-color;
-
-
-//-- EXPANDED MODE: NOTIFICATION TITLE --//
-$vnpn-iphone_x-notification-expanded-mode-title-font-weight: bold;
-
-
-//-- EXPANDED MODE: NOTIFICATION BODY --//
-$vnpn-iphone_x-notification-expanded-mode-body-line-clamp: 4;
+//-- EXPANDED SIZE: NOTIFICATION TITLE --//
+$vnpn-iphone_x-notification-expanded-size-title-font-weight: bold;

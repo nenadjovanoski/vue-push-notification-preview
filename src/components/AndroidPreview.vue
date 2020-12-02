@@ -10,7 +10,7 @@
                 </div>
 
                 <div
-                    :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
+                    :class="['vpnp-notification', appearanceModeFormat, sizeFormat]"
                 >
                     <div class="vpnp-notification-heading">
                         <p

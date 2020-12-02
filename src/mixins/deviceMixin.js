@@ -1,4 +1,4 @@
-import { APPEARANCE_MODE, SIZE_MODE } from '../constants/shared';
+import { APPEARANCE_MODE, SIZE } from '../constants/shared';
 
 export const deviceMixin = {
     props: {
@@ -12,10 +12,10 @@ export const deviceMixin = {
             default: '#c1c1c1'
         },
 
-        sizeMode: {
+        size: {
             type: String,
-            default: SIZE_MODE.INITIAL,
-            validator: value => Object.values(SIZE_MODE).indexOf(value) !== -1
+            default: SIZE.INITIAL,
+            validator: value => Object.values(SIZE).indexOf(value) !== -1
         },
 
         appearanceMode: {
@@ -43,26 +43,26 @@ export const deviceMixin = {
         appearanceModeFormat() {
             switch (this.appearanceMode) {
                 case APPEARANCE_MODE.LIGHT:
-                    return 'vpnp-light-mode';
+                    return 'vpnp-notification-light-mode';
 
                 case APPEARANCE_MODE.DARK:
-                    return 'vpnp-dark-mode';
+                    return 'vpnp-notification-dark-mode';
 
                 default:
                     throw new Error('Unrecognized appearance mode!');
             }
         },
 
-        sizeModeFormat() {
-            switch (this.sizeMode) {
-                case SIZE_MODE.INITIAL:
-                    return 'vpnp-initial-mode';
+        sizeFormat() {
+            switch (this.size) {
+                case SIZE.INITIAL:
+                    return 'vpnp-notification-initial-size';
 
-                case SIZE_MODE.EXPANDED:
-                    return 'vpnp-expanded-mode';
+                case SIZE.EXPANDED:
+                    return 'vpnp-notification-expanded-size';
 
                 default:
-                    throw new Error('Unrecognized size mode!');
+                    throw new Error('Unrecognized size!');
             }
         },
 

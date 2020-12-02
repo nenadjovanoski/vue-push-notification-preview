@@ -48,9 +48,6 @@
                     max-width: 70%;
                     margin: 0 0 0 10px;
 
-                    font-size: $vnpn-pixel_4-notification-application-name-font-size;
-                    color: $vnpn-pixel_4-notification-application-name-color;
-
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -69,9 +66,6 @@
                     .vpnp-notification-application-time {
                         margin: 0 0 0 10px;
                         display: inline;
-
-                        font-size: $vnpn-pixel_4-notification-time-font-size;
-                        color: $vnpn-pixel_4-notification-time-color;
                     }
                 }
             }
@@ -86,41 +80,29 @@
                     display: flex;
                     margin: 0;
                 }
+
+                .vpnp-notification-body {
+                    margin: 0;
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: $vnpn-pixel_4-notification-body-line-clamp;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
             }
 
-            &.vpnp-notification-expanded-mode {
-
+            &.vpnp-notification-expanded-size {
                 .vpnp-notification-content {
-                    font-size: $vnpn-pixel_4-notification-expanded-mode-content-font-size;
-
                     .vpnp-notification-title {
-                        font-size: $vnpn-pixel_4-notification-expanded-mode-title-font-size;
-                        font-weight: $vnpn-pixel_4-notification-expanded-mode-title-font-weight;
-                    }
-
-                    .vpnp-notification-body {
-                        display: -webkit-box;
-                        -webkit-line-clamp: $vnpn-pixel_4-notification-expanded-mode-line-clamp;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-
-                        font-size: $vnpn-pixel_4-notification-expanded-mode-body-font-size;
+                        font-weight: $vnpn-pixel_4-notification-expanded-size-title-font-weight;
                     }
                 }
             }
 
             &.vpnp-notification-light-mode {
-                &.vpnp-notification-expanded-mode {
+                &.vpnp-notification-expanded-size {
                     .vpnp-notification-content {
                         color: $vnpn-pixel_4-notification-light-mode-and-content-color;
-
-                        .vpnp-notification-title {
-                            color: $vnpn-pixel_4-notification-light-mode-mode-title-color;
-                        }
-
-                        .vpnp-notification-body {
-                            color: $vnpn-pixel_4-notification-light-mode-mode-body-color;
-                        }
                     }
                 }
             }
@@ -137,13 +119,13 @@
                 }
 
                 .vpnp-notification-content {
-                    color: $vnpn-pixel_4-notification-dark-mode-content-background-color;
+                    color: $vnpn-pixel_4-notification-dark-mode-content-color;
                 }
 
-                &.vpnp-notification-expanded-mode {
+                &.vpnp-notification-expanded-size {
                     .vpnp-notification-content {
                         .vpnp-notification-body {
-                            color: $vnpn-pixel_4-notification-dark-mode-and-expanded-mode-body-background-color;
+                            color: $vnpn-pixel_4-notification-dark-mode-and-expanded-size-body-background-color !important;
                         }
                     }
                 }

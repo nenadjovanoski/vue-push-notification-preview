@@ -55,9 +55,6 @@
                         margin: 0 0 0 5px;
                         width: inherit;
 
-                        font-size: $vnpn-iphone_x-notification-application-name-font-size;
-                        color: $vnpn-iphone_x-notification-application-name-color;
-
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -67,30 +64,35 @@
 
                 .vpnp-notification-time {
                     margin: 0;
-
-                    font-size: $vnpn-iphone_x-notification-time-font-size;
-                    color: $vnpn-iphone_x-notification-time-color;
                 }
             }
 
             .vpnp-notification-content {
+                margin-top: 5px;
+
                 font-size: $vnpn-iphone_x-notification-content-font-size;
                 color: $vnpn-iphone_x-notification-content-color;
-                margin-top: 5px;
 
                 .vpnp-notification-title {
                     display: flex;
                     margin: 0;
-
-                    font-size: $vnpn-iphone_x-notification-title-font-size;
-                    color: $vnpn-iphone_x-notification-title-color;
                 }
 
                 .vpnp-notification-body {
                     margin: 0;
 
-                    font-size: $vnpn-iphone_x-notification-body-font-size;
-                    color: $vnpn-iphone_x-notification-body-color;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $vnpn-iphone_x-notification-body-line-clamp;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            &.vpnp-notification-expanded-size {
+                .vpnp-notification-content {
+                    .vpnp-notification-title {
+                        font-weight: $vnpn-iphone_x-notification-expanded-size-title-font-weight;
+                    }
                 }
             }
 
@@ -101,42 +103,14 @@
                     color: $vnpn-iphone_x-notification-dark-mode-heading-color;
 
                     .vpnp-notification-heading-icon-name-container {
-
                         .vpnp-notification-application-icon {
                             background-color: $vnpn-iphone_x-notification-dark-mode-application-icon-background-color;
-                        }
-
-                        .vpnp-notification-application-name {
-                            color: $vnpn-iphone_x-notification-dark-mode-application-name-color;
                         }
                     }
                 }
 
                 .vpnp-notification-content {
                     color: $vnpn-iphone_x-notification-dark-mode-content-color;
-
-                    .vpnp-title {
-                        color: $vnpn-iphone_x-notification-dark-mode-title-color;
-                    }
-
-                    .vpnp-body {
-                        color: $vnpn-iphone_x-notification-dark-mode-body-color;
-                    }
-                }
-            }
-
-            &.vpnp-notification-expanded-mode {
-                .vpnp-notification-content {
-                    .vpnp-notification-title {
-                        font-weight: $vnpn-iphone_x-notification-expanded-mode-title-font-weight;
-                    }
-
-                    .vpnp-notification-body {
-                        display: -webkit-box;
-                        -webkit-line-clamp: $vnpn-iphone_x-notification-expanded-mode-body-line-clamp;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                    }
                 }
             }
         }

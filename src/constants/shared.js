@@ -8,7 +8,7 @@ export const APPEARANCE_MODE = Object.freeze({
     DARK: 'dark'
 });
 
-export const SIZE_MODE = Object.freeze({
+export const SIZE = Object.freeze({
     INITIAL: 'initial',
     EXPANDED: 'expanded'
 });
