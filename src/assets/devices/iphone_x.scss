@@ -8,10 +8,16 @@
     font-family: sans-serif;
 
     .vpnp-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13%;
+
         width: $vnpn-iphone_x-content-width;
         height: $vnpn-iphone_x-content-height;
 
         .vpnp-header {
+            margin-bottom: 2%;
+
             width: $vnpn-iphone_x-header-width;
             height: $vnpn-iphone_x-header-height;
         }

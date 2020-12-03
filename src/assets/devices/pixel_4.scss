@@ -8,10 +8,16 @@
     font-family: sans-serif;
 
     .vpnp-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+
         width: $vnpn-pixel_4-content-width;
         height: $vnpn-pixel_4-content-height;
 
         .vpnp-header {
+            margin-bottom: 2%;
+
             width: $vnpn-pixel_4-header-width;
             height: $vnpn-pixel_4-header-height;
         }
