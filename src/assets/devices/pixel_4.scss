@@ -79,6 +79,23 @@
                     margin-left: auto;
                     cursor: $vnpn-pixel_4-notification-toggler-cursor;
                     color: $vnpn-pixel_4-notification-toggler-color;
+
+                    .vpnp-notification-toggler-arrow {
+                        border: solid;
+                        border-width: 0 3px 3px 0;
+                        display: inline-block;
+                        padding: 3px;
+
+                        &.up {
+                            transform: rotate(-135deg);
+                            -webkit-transform: rotate(-135deg);
+                        }
+
+                        &.down {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                        }
+                    }
                 }
             }
 
