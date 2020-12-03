@@ -32,11 +32,14 @@
     "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js"
   },
   "devDependencies": {
-    "vue": "^2.6.11",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
