@@ -12,12 +12,6 @@ export const deviceMixin = {
             default: '#c1c1c1'
         },
 
-        size: {
-            type: String,
-            default: SIZE.INITIAL,
-            validator: value => Object.values(SIZE).indexOf(value) !== -1
-        },
-
         appearanceMode: {
             type: String,
             default: APPEARANCE_MODE.LIGHT,
@@ -50,19 +44,6 @@ export const deviceMixin = {
 
                 default:
                     throw new Error('Unrecognized appearance mode!');
-            }
-        },
-
-        sizeFormat() {
-            switch (this.size) {
-                case SIZE.INITIAL:
-                    return 'vpnp-notification-initial-size';
-
-                case SIZE.EXPANDED:
-                    return 'vpnp-notification-expanded-size';
-
-                default:
-                    throw new Error('Unrecognized size!');
             }
         },
 
