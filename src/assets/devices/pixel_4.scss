@@ -74,6 +74,12 @@
                         display: inline;
                     }
                 }
+
+                .vpnp-notification-toggler {
+                    margin-left: auto;
+                    cursor: $vnpn-pixel_4-notification-toggler-cursor;
+                    color: $vnpn-pixel_4-notification-toggler-color;
+                }
             }
 
             .vpnp-notification-content {
@@ -121,6 +127,10 @@
 
                     .vpnp-notification-application-icon {
                         background-color: $vnpn-pixel_4-notification-dark-mode-application-icon-background-color;
+                    }
+
+                    .vpnp-notification-toggler {
+                        color: $vnpn-pixel_4-notification-dark-mode-toggler-color;
                     }
                 }
 

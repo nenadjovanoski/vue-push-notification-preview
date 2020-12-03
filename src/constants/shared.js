@@ -11,4 +11,12 @@ export const APPEARANCE_MODE = Object.freeze({
     DARK: 'dark'
 });
 
+export const APPEARANCE_MODE_CLASS = Object.freeze({
+    LIGHT: 'vpnp-notification-light-mode',
+    DARK: 'vpnp-notification-dark-mode'
+});
+
+export const NOTIFICATION_SIZE_CLASS = Object.freeze({
+    INITIAL: 'vpnp-notification-initial-size',
+    EXPANDED: 'vpnp-notification-expanded-size'
 });

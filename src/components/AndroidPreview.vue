@@ -10,11 +10,12 @@
                 </div>
 
                 <div
-                    :class="['vpnp-notification', appearanceModeFormat, sizeFormat]"
+                    :class="['vpnp-notification', appearanceModeClass, notificationExpandedClass]"
                 >
                     <div class="vpnp-notification-heading">
                         <p
                             class="vpnp-notification-application-icon"
+                            @click="toggleNotification"
                         />
 
                         <p
@@ -35,6 +36,22 @@
                                 v-html="textTime"
                             />
                         </div>
+
+                        <a
+                            class="vpnp-notification-toggler"
+                            @click="toggleNotification"
+                        >
+                            <font-awesome-icon
+                                v-if="!isExpanded"
+                                icon="chevron-down"
+                                size="lg"
+                            />
+                            <font-awesome-icon
+                                v-else
+                                icon="chevron-up"
+                                size="lg"
+                            />
+                        </a>
                     </div>
 
                     <div
@@ -60,6 +77,12 @@
 </template>
 
 <script>
+    import { library } from '@fortawesome/fontawesome-svg-core';
+    import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+    library.add(faChevronDown, faChevronUp);
+
     import { DEVICE_SIZE } from '../constants/shared';
 
     import { deviceMixin } from '../mixins/deviceMixin';
@@ -106,6 +129,10 @@
                     width: `${this.height * (DEVICE_SIZE.PIXEL_4_WIDTH / DEVICE_SIZE.PIXEL_4_HEIGHT)}px`
                 }
             }
+        },
+
+        components: {
+            FontAwesomeIcon
         }
     }
 </script>

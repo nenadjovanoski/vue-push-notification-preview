@@ -12,12 +12,13 @@
                 </div>
 
                 <div
-                    :class="['vpnp-notification', appearanceModeFormat, sizeFormat]"
+                    :class="['vpnp-notification', appearanceModeClass, notificationExpandedClass]"
                 >
                     <div class="vpnp-notification-heading">
                         <div class="vpnp-notification-heading-icon-name-container">
                             <p
                                 class="vpnp-notification-application-icon"
+                                @click="toggleNotification"
                             />
 
                             <p

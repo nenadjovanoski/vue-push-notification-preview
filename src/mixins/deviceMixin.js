@@ -1,4 +1,8 @@
-import { APPEARANCE_MODE, SIZE } from '../constants/shared';
+import {
+    APPEARANCE_MODE,
+    APPEARANCE_MODE_CLASS,
+    NOTIFICATION_SIZE_CLASS
+} from '../constants/shared';
 
 export const deviceMixin = {
     props: {
@@ -34,13 +38,13 @@ export const deviceMixin = {
             }
         },
 
-        appearanceModeFormat() {
+        appearanceModeClass() {
             switch (this.appearanceMode) {
                 case APPEARANCE_MODE.LIGHT:
-                    return 'vpnp-notification-light-mode';
+                    return APPEARANCE_MODE_CLASS.LIGHT;
 
                 case APPEARANCE_MODE.DARK:
-                    return 'vpnp-notification-dark-mode';
+                    return APPEARANCE_MODE_CLASS.DARK;
 
                 default:
                     throw new Error('Unrecognized appearance mode!');
@@ -53,6 +57,20 @@ export const deviceMixin = {
 
         hasBody() {
             return this.textBody !== '';
+        },
+
+        isExpanded() {
+            return this.hasBody;
+        },
+
+        notificationExpandedClass() {
+            return !this.isExpanded ? NOTIFICATION_SIZE_CLASS.INITIAL : NOTIFICATION_SIZE_CLASS.EXPANDED
+        },
+    },
+
+    methods: {
+        toggleNotification() {
+            this.$emit('toggle-notification');
         }
     }
 };

@@ -28,6 +28,10 @@ $vnpn-pixel_4-notification-application-icon-height: 15px;
 $vnpn-pixel_4-notification-application-icon-background-color: $black;
 $vnpn-pixel_4-notification-application-icon-border-radius: 50%;
 
+//-- NOTIFICATION TOGGLES --//
+$vnpn-pixel_4-notification-toggler-cursor: pointer;
+$vnpn-pixel_4-notification-toggler-color: $black;
+
 
 //-- NOTIFICATION CONTENT --//
 $vnpn-pixel_4-notification-content-font-size: 13px;
@@ -56,6 +60,9 @@ $vnpn-pixel_4-notification-dark-mode-heading-color: $white;
 
 //-- DARK MODE: NOTIFICATION APPLICATION ICON --//
 $vnpn-pixel_4-notification-dark-mode-application-icon-background-color: $vnpn-pixel_4-notification-dark-mode-heading-color;
+
+//-- DARK MODE: NOTIFICATION TOGGLES --//
+$vnpn-pixel_4-notification-dark-mode-toggler-color: $white;
 
 
 //-- DARK MODE: NOTIFICATION CONTENT --//
