@@ -1,40 +1,51 @@
 <template>
     <div
         :class="['vpnp-wrapper-iphone_x']"
-        :style="backgroundStyle"
+        :style="[backgroundStyle, sizeStyle]"
     >
         <div class="vpnp-iphone_x">
-            <div
-                :class="['vpnp-notification', appearanceModeFormat, sizeModeFormat]"
-            >
-                <div class="vpnp-heading">
-                    <span
-                        class="vpnp-application-icon"
-                    />
-
-                    <span
-                        class="vpnp-application-name"
-                        v-html="textApplicationName"
-                    />
-
-                    <span
-                        class="vpnp-application-time"
-                        v-html="textTime"
-                    />
+            <div class="vpnp-content">
+                <div
+                    class="vpnp-header"
+                >
+                    <slot name="header"></slot>
                 </div>
 
-                <div class="vpnp-content">
-                <span
-                    v-if="hasTitle"
-                    class="vpnp-title"
-                    v-html="textTitle"
-                />
+                <div
+                    :class="['vpnp-notification', appearanceModeClass, notificationExpandedClass]"
+                >
+                    <div class="vpnp-notification-heading">
+                        <div class="vpnp-notification-heading-icon-name-container">
+                            <p
+                                class="vpnp-notification-application-icon"
+                                @click="toggleNotification"
+                            />
 
-                    <span
-                        v-if="hasBody"
-                        class="vpnp-body"
-                        v-html="textBody"
-                    />
+                            <p
+                                class="vpnp-notification-application-name"
+                                v-html="textApplicationName"
+                            />
+                        </div>
+
+                        <p
+                            class="vpnp-notification-time"
+                            v-html="textTime"
+                        />
+                    </div>
+
+                    <div class="vpnp-notification-content">
+                        <p
+                            v-if="hasTitle"
+                            class="vpnp-notification-title"
+                            v-html="textTitle"
+                        />
+
+                        <p
+                            v-if="hasBody"
+                            class="vpnp-notification-body"
+                            v-html="textBody"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +53,8 @@
 </template>
 
 <script>
+    import { DEVICE_SIZE } from '../constants/shared';
+
     import { deviceMixin } from '../mixins/deviceMixin';
 
     export default {
@@ -71,6 +84,20 @@
             textBody: {
                 type: String,
                 default: ''
+            },
+
+            height: {
+                type: Number,
+                default: DEVICE_SIZE.IPHONE_X_HEIGHT
+            }
+        },
+
+        computed: {
+            sizeStyle() {
+                return {
+                    height: `${this.height}px`,
+                    width: `${this.height * (DEVICE_SIZE.IPHONE_X_WIDTH / DEVICE_SIZE.IPHONE_X_HEIGHT)}px`
+                }
             }
         }
     }

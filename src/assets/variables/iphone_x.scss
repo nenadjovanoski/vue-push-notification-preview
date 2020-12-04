@@ -1,0 +1,61 @@
+@import 'shared';
+
+//-- CONTENT WRAPPER --//
+$vnpn-iphone_x-content-width: 87%;
+$vnpn-iphone_x-content-height: 100%;
+
+
+//-- HEADER --//
+$vnpn-iphone_x-header-width: 100%;
+$vnpn-iphone_x-header-height: 30%;
+
+
+//-- NOTIFICATION --//
+$vnpn-iphone_x-notification-min-height: 35px;
+$vnpn-iphone_x-notification-padding: 8px;
+$vnpn-iphone_x-notification-border-radius: 9px;
+$vnpn-iphone_x-notification-background-color: rgba(255, 255, 255, 0.9);
+
+
+//-- NOTIFICATION HEADING --//
+$vnpn-iphone_x-notification-heading-font-size: 11px;
+$vnpn-iphone_x-notification-heading-color: #676767;
+
+
+//-- NOTIFICATION APPLICATION ICON --//
+$vnpn-iphone_x-notification-application-icon-width: 15px;
+$vnpn-iphone_x-notification-application-icon-height: 15px;
+$vnpn-iphone_x-notification-application-icon-background-color: $black;
+$vnpn-iphone_x-notification-application-icon-border-radius: 5px;
+
+//-- NOTIFICATION TOGGLES --//
+$vnpn-iphone_x-notification-toggler-cursor: pointer;
+
+
+//-- NOTIFICATION CONTENT --//
+$vnpn-iphone_x-notification-content-font-size: 12px;
+$vnpn-iphone_x-notification-content-color: $black;
+
+
+//-- NOTIFICATION BODY --//
+$vnpn-iphone_x-notification-body-line-clamp: 4;
+
+
+//-- DARK MODE: NOTIFICATION --//
+$vnpn-iphone_x-notification-dark-mode-color: rgba(53, 53, 53, 0.9);
+
+
+//-- DARK MODE: NOTIFICATION HEADING --//
+$vnpn-iphone_x-notification-dark-mode-heading-color: #b1b1b1;
+
+
+//-- DARK MODE: NOTIFICATION APPLICATION ICON --//
+$vnpn-iphone_x-notification-dark-mode-application-icon-background-color: $white;
+
+
+//-- DARK MODE: NOTIFICATION CONTENT --//
+$vnpn-iphone_x-notification-dark-mode-content-color: $white;
+
+
+//-- EXPANDED SIZE: NOTIFICATION TITLE --//
+$vnpn-iphone_x-notification-expanded-size-title-font-weight: bold;

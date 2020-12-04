@@ -1,113 +1,169 @@
-@import '../variables';
+@import '../variables/pixel_4';
 
 .vpnp-pixel_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-family: sans-serif;
 
-    .vpnp-notification {
-        position: absolute;
-        top: 52%;
-        left: 5.4%;
+    .vpnp-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
 
-        width: 79.2%;
-        min-height: 15px;
-        height: auto;
+        width: $vnpn-pixel_4-content-width;
+        height: $vnpn-pixel_4-content-height;
 
-        padding: 15px;
-        border-radius: 5px;
-        background-color: $white;
+        .vpnp-header {
+            margin-bottom: 2%;
 
-        .vpnp-heading {
+            width: $vnpn-pixel_4-header-width;
+            height: $vnpn-pixel_4-header-height;
+        }
+
+        .vpnp-notification {
             display: flex;
-            align-items: center;
+            flex-direction: column;
 
-            font-size: 12px;
-            color: #565656;
+            min-height: $vnpn-pixel_4-notification-min-height;
+            height: auto;
 
-            .vpnp-application-icon {
-                width: 15px;
-                height: 15px;
+            padding: $vnpn-pixel_4-notification-padding;
+            border-radius: $vnpn-pixel_4-notification-border-radius;
+            background-color: $vnpn-pixel_4-notification-background-color;
 
-                background-color: $black;
-                border-radius: 50%;
-            }
-
-            .vpnp-application-name {
-                margin-left: 10px;
-            }
-
-            .vpnp-application-time-container {
-                margin-left: 10px;
-
-                .vpnp-application-time-separator {
-                    font-weight: bold;
-                }
-
-                .vpnp-application-time {
-                    margin-left: 10px;
-                }
-            }
-        }
-
-        .vpnp-content {
-            color: $black;
-            font-size: 13px;
-            margin-top: 10px;
-
-            .vpnp-title {
+            .vpnp-notification-heading {
                 display: flex;
-            }
-        }
+                flex-direction: row;
+                align-items: center;
 
-        &.vpnp-light-mode {
-            &.vpnp-expanded-mode {
-                .vpnp-content {
-                    color: #3b3b3b;
+                font-size: $vnpn-pixel_4-notification-heading-font-size;
+                color: $vnpn-pixel_4-notification-heading-color;
 
-                    .vpnp-title {
+                .vpnp-notification-application-icon {
+                    margin: 0;
+                    width: $vnpn-pixel_4-notification-application-icon-width;
+                    height: $vnpn-pixel_4-notification-application-icon-height;
+
+                    background-color: $vnpn-pixel_4-notification-application-icon-background-color;
+                    border-radius: $vnpn-pixel_4-notification-application-icon-border-radius;
+                }
+
+                .vpnp-notification-application-name {
+                    max-width: 70%;
+                    margin: 0 0 0 10px;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .vpnp-notification-application-time-container {
+                    margin: 0 0 0 10px;
+
+                    .vpnp-notification-application-time-separator {
+                        margin: 0;
+                        display: inline;
+
                         font-weight: bold;
                     }
 
-                    .vpnp-body {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
+                    .vpnp-notification-application-time {
+                        margin: 0 0 0 10px;
+                        display: inline;
+                    }
+                }
+
+                .vpnp-notification-toggler {
+                    margin-left: auto;
+                    cursor: $vnpn-pixel_4-notification-toggler-cursor;
+                    color: $vnpn-pixel_4-notification-toggler-color;
+
+                    .vpnp-notification-toggler-arrow {
+                        border: solid;
+                        border-width: 0 3px 3px 0;
+                        display: inline-block;
+                        padding: 3px;
+
+                        &.up {
+                            transform: rotate(-135deg);
+                            -webkit-transform: rotate(-135deg);
+                        }
+
+                        &.down {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                        }
                     }
                 }
             }
+
+            .vpnp-notification-content {
+                margin-top: 10px;
+
+                font-size: $vnpn-pixel_4-notification-content-font-size;
+                color: $vnpn-pixel_4-notification-content-color;
+
+                .vpnp-notification-title {
+                    display: flex;
+                    margin: 0;
+                }
+
+                .vpnp-notification-body {
+                    margin: 0;
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: $vnpn-pixel_4-notification-body-line-clamp;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            &.vpnp-notification-expanded-size {
+                .vpnp-notification-content {
+                    .vpnp-notification-title {
+                        font-weight: $vnpn-pixel_4-notification-expanded-size-title-font-weight;
+                    }
+                }
+            }
+
+            &.vpnp-notification-light-mode {
+                &.vpnp-notification-expanded-size {
+                    .vpnp-notification-content {
+                        color: $vnpn-pixel_4-notification-light-mode-and-content-color;
+                    }
+                }
+            }
+
+            &.vpnp-notification-dark-mode {
+                background-color: $vnpn-pixel_4-notification-dark-mode-background-color;
+
+                .vpnp-notification-heading {
+                    color: $vnpn-pixel_4-notification-dark-mode-heading-color;
+
+                    .vpnp-notification-application-icon {
+                        background-color: $vnpn-pixel_4-notification-dark-mode-application-icon-background-color;
+                    }
+
+                    .vpnp-notification-toggler {
+                        color: $vnpn-pixel_4-notification-dark-mode-toggler-color;
+                    }
+                }
+
+                .vpnp-notification-content {
+                    color: $vnpn-pixel_4-notification-dark-mode-content-color;
+                }
+
+                &.vpnp-notification-expanded-size {
+                    .vpnp-notification-content {
+                        .vpnp-notification-body {
+                            color: $vnpn-pixel_4-notification-dark-mode-and-expanded-size-body-background-color !important;
+                        }
+                    }
+                }
+            }
+
         }
-
-        &.vpnp-dark-mode {
-            background-color: $black;
-
-            .vpnp-heading {
-                color: $white;
-
-                .vpnp-application-icon {
-                    background-color: $white;
-                }
-            }
-
-            .vpnp-content {
-                color: $white;
-            }
-
-            &.vpnp-expanded-mode {
-                .vpnp-content {
-                    .vpnp-title {
-                        font-weight: bold;
-                    }
-
-                    .vpnp-body {
-                        color: #e6e6e6;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                    }
-                }
-            }
-        }
-
     }
 }

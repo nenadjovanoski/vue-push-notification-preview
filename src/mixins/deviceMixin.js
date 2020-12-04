@@ -1,4 +1,8 @@
-import { APPEARANCE_MODE, SIZE_MODE } from '../constants/shared';
+import {
+    APPEARANCE_MODE,
+    APPEARANCE_MODE_CLASS,
+    NOTIFICATION_SIZE_CLASS
+} from '../constants/shared';
 
 export const deviceMixin = {
     props: {
@@ -10,12 +14,6 @@ export const deviceMixin = {
         backgroundColor: {
             type: String,
             default: '#c1c1c1'
-        },
-
-        sizeMode: {
-            type: String,
-            default: SIZE_MODE.INITIAL,
-            validator: value => Object.values(SIZE_MODE).indexOf(value) !== -1
         },
 
         appearanceMode: {
@@ -40,29 +38,16 @@ export const deviceMixin = {
             }
         },
 
-        appearanceModeFormat() {
+        appearanceModeClass() {
             switch (this.appearanceMode) {
                 case APPEARANCE_MODE.LIGHT:
-                    return 'vpnp-light-mode';
+                    return APPEARANCE_MODE_CLASS.LIGHT;
 
                 case APPEARANCE_MODE.DARK:
-                    return 'vpnp-dark-mode';
+                    return APPEARANCE_MODE_CLASS.DARK;
 
                 default:
                     throw new Error('Unrecognized appearance mode!');
-            }
-        },
-
-        sizeModeFormat() {
-            switch (this.sizeMode) {
-                case SIZE_MODE.INITIAL:
-                    return 'vpnp-initial-mode';
-
-                case SIZE_MODE.EXPANDED:
-                    return 'vpnp-expanded-mode';
-
-                default:
-                    throw new Error('Unrecognized size mode!');
             }
         },
 
@@ -72,6 +57,20 @@ export const deviceMixin = {
 
         hasBody() {
             return this.textBody !== '';
+        },
+
+        isExpanded() {
+            return this.hasBody;
+        },
+
+        notificationExpandedClass() {
+            return !this.isExpanded ? NOTIFICATION_SIZE_CLASS.INITIAL : NOTIFICATION_SIZE_CLASS.EXPANDED
+        },
+    },
+
+    methods: {
+        toggleNotification() {
+            this.$emit('toggle-notification');
         }
     }
 };
