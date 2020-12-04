@@ -1,8 +1,8 @@
 {
   "name": "vue-push-notification-preview",
   "description": "A library to preview the push notifications on iOS and Android devices",
-  "version": "1.1.0",
-  "author": "Nenad Jovanoski",
+  "version": "2.0.0",
+  "author": "Nenad Jovanoski <jovanoskinenad@gmail.com>",
   "license": "MIT",
   "keywords": [
     "vue",
@@ -21,11 +21,12 @@
     "dist/*",
     "src/components/*"
   ],
-  "unpkg": "dist/vue-push-notification-preview.umd.min.js",
-  "jsdelivr": "dist/vue-push-notification-preview.umd.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nenadjovanoski/vue-push-notification-preview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nenadjovanoski/vue-push-notification-preview/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -40,6 +41,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.x"
   }
 }
