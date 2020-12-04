@@ -15,7 +15,6 @@
                     <div class="vpnp-notification-heading">
                         <p
                             class="vpnp-notification-application-icon"
-                            @click="toggleNotification"
                         />
 
                         <p
