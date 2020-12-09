@@ -1,6 +1,7 @@
 const { name, description, repository } = require('../../package')
 
 module.exports = {
+    base: '/vue-push-notification-preview/',
     locales: {
         '/': {
             lang: 'en-US',
