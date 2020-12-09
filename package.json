@@ -1,5 +1,5 @@
 {
-  "name": "vue-push-notification-preview",
+  "name": "vue-push-notification-preview-docs",
   "description": "A library to preview the push notifications on iOS and Android devices",
   "version": "2.0.0",
   "author": "Nenad Jovanoski <jovanoskinenad@gmail.com>",
@@ -30,7 +30,9 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js"
+    "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -38,9 +40,13 @@
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.7.1"
   },
   "peerDependencies": {
     "vue": "^2.6.x"
+  },
+  "dependencies": {
+    "vue-push-notification-preview": "^2.0.0"
   }
 }
