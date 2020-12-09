@@ -2,6 +2,8 @@
 node_modules
 dist
 
+src/App.vue
+docs
 
 # local env files
 .env.local

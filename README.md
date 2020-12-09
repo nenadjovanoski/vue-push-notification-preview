@@ -2,7 +2,7 @@
 
 A library for previewing push notification on devices.
 
-<img src="/public/examples/main_example.png" alt="vue-push-notification-preview main example" />
+<a href="https://nenadjovanoski.github.io/vue-push-notification-preview/"><img src="/public/examples/main_example.png" alt="vue-push-notification-preview main example" /></a>
 
 ## 🙋‍♂️ Features
 - **✅ No dependencies**
@@ -44,7 +44,9 @@ Explicitly register it to a component you want to use it in.
 </script>
 ```
 
-### 👨🏻‍🏫 Configuration
+### 👨🏻‍🏫 Documentation
+
+Visit: https://nenadjovanoski.github.io/vue-push-notification-preview/
 
 #### Props
 
