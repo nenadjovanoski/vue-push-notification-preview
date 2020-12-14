@@ -83,9 +83,6 @@
                 color: $vnpn-iphone_x-notification-content-color;
 
                 .vpnp-notification-content-text {
-                    min-width: $vnpn-iphone_x-notification-content-text-min-width;
-                    width: $vnpn-iphone_x-notification-content-text-width;
-
                     .vpnp-notification-title {
                         display: flex;
                         margin: 0;
@@ -104,7 +101,7 @@
                 .vpnp-notification-content-image {
                     min-width: $vnpn-iphone_x-notification-content-image-min-width;
                     height: $vnpn-iphone_x-notification-content-image-height;
-                    margin-left: auto;
+                    margin-left: 2%;
 
                     border-radius: $vnpn-iphone_x-notification-content-image-border-radius;
                     background-size: cover;
