@@ -86,6 +86,23 @@ All props for IphonePreview components.
 </SourceCode>
 
 
+## Notification Image
+
+### Example
+
+<br>
+
+<Demo componentName="examples/iphone/props/image" />
+
+### Source Code
+
+<SourceCode>
+
+<<< @/docs/.vuepress/components/examples/iphone/props/image.vue
+
+</SourceCode>
+
+
 ## Dark mode
 
 ### Example

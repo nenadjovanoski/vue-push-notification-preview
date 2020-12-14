@@ -48,6 +48,6 @@
     "vue": "^2.6.x"
   },
   "dependencies": {
-    "vue-push-notification-preview": "^2.0.0"
+    "vue-push-notification-preview": "^2.1.1"
   }
 }

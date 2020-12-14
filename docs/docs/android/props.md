@@ -86,6 +86,39 @@ All props for AndroidPreview components.
 </SourceCode>
 
 
+## Notification Image
+
+### Example
+
+<br>
+
+<Demo componentName="examples/android/props/image" />
+
+### Source Code
+
+<SourceCode>
+
+<<< @/docs/.vuepress/components/examples/android/props/image.vue
+
+</SourceCode>
+
+## Notification Is Visible Toggler
+
+### Example
+
+<br>
+
+<Demo componentName="examples/android/props/is-visible-toggler" />
+
+### Source Code
+
+<SourceCode>
+
+<<< @/docs/.vuepress/components/examples/android/props/is-visible-toggler.vue
+
+</SourceCode>
+
+
 ## Dark mode
 
 ### Example
