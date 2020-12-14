@@ -50,21 +50,34 @@ Visit: https://nenadjovanoski.github.io/vue-push-notification-preview/
 
 #### Props
 
-All props for `AndroidPreview` and `IphonePreview` components:
+All props for `AndroidPreview` component:
 
 | Name                      | Type      | Default                       | Description |
 | ---                       | ---       | ---                           | ---         |
 | textApplicationName       | String    | 'App name'                    |  |
 | textTime                  | String    | '1h ago'                      |  |
-| textTitle **(Android)**   | String    | ''                            |  |
-| textTitle **(Iphone)**    | String    | 'Title notification'          |  |
+| textTitle                 | String    | ''                            |  |
 | textBody                  | String    | ''                            |  |
+| image                     | String    | ''                            | URL for adding image to notification |
 | appearanceMode            | String    | 'light'                       | `'light'` and `dark` are possible options. |
 | backgroundImage           | String    | ''                            | `backgroundImage` has lower priority over `backgroundColor`. |
 | backgroundColor           | String    | '#c1c1c1'                     | `backgroundColor` has higher priority over `backgroundImage`. |
-| height **(Android)**      | Number    | 644 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
-| height **(Iphone)**       | Number    | 614 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
+| height                    | Number    | 644 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
+| isVisibleToggler          | Boolean   | false                         | A prop for managing when arrow toggler is visible in notification. |
 
+All props for `IphonePreview` component:
+
+| Name                      | Type      | Default                       | Description |
+| ---                       | ---       | ---                           | ---         |
+| textApplicationName       | String    | 'App name'                    |  |
+| textTime                  | String    | '1h ago'                      |  |
+| textTitle                 | String    | 'Title notification'          |  |
+| textBody                  | String    | ''                            |  |
+| image                     | String    | ''                            | URL for adding image to notification |
+| appearanceMode            | String    | 'light'                       | `'light'` and `dark` are possible options. |
+| backgroundImage           | String    | ''                            | `backgroundImage` has lower priority over `backgroundColor`. |
+| backgroundColor           | String    | '#c1c1c1'                     | `backgroundColor` has higher priority over `backgroundImage`. |
+| height                    | Number    | 614 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
 
 #### Events
 

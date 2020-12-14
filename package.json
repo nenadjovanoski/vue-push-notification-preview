@@ -1,7 +1,7 @@
 {
   "name": "vue-push-notification-preview",
   "description": "A library to preview the push notifications on iOS and Android devices",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "Nenad Jovanoski <jovanoskinenad@gmail.com>",
   "license": "MIT",
   "keywords": [
