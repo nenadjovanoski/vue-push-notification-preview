@@ -100,23 +100,41 @@
             }
 
             .vpnp-notification-content {
+                display: flex;
+                flex-direction: column;
                 margin-top: 10px;
 
                 font-size: $vnpn-pixel_4-notification-content-font-size;
                 color: $vnpn-pixel_4-notification-content-color;
 
-                .vpnp-notification-title {
-                    display: flex;
-                    margin: 0;
+                .vpnp-notification-content-text {
+                    min-width: $vnpn-pixel_4-notification-content-text-min-width;
+                    width: $vnpn-pixel_4-notification-content-text-width;
+
+                    .vpnp-notification-title {
+                        display: flex;
+                        margin: 0;
+                    }
+
+                    .vpnp-notification-body {
+                        margin: 0;
+
+                        display: -webkit-box;
+                        -webkit-line-clamp: $vnpn-pixel_4-notification-body-line-clamp;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
                 }
 
-                .vpnp-notification-body {
-                    margin: 0;
+                .vpnp-notification-content-image {
+                    width: $vnpn-pixel_4-notification-content-image-width;
+                    height: $vnpn-pixel_4-notification-content-image-height;
+                    margin-top: 5px;
 
-                    display: -webkit-box;
-                    -webkit-line-clamp: $vnpn-pixel_4-notification-body-line-clamp;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
+                    border-radius: $vnpn-pixel_4-notification-content-image-border-radius;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
             }
 
