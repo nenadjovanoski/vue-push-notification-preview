@@ -75,23 +75,38 @@
             }
 
             .vpnp-notification-content {
+                display: flex;
+                flex-direction: row;
                 margin-top: 5px;
 
                 font-size: $vnpn-iphone_x-notification-content-font-size;
                 color: $vnpn-iphone_x-notification-content-color;
 
-                .vpnp-notification-title {
-                    display: flex;
-                    margin: 0;
+                .vpnp-notification-content-text {
+                    .vpnp-notification-title {
+                        display: flex;
+                        margin: 0;
+                    }
+
+                    .vpnp-notification-body {
+                        margin: 0;
+
+                        display: -webkit-box;
+                        -webkit-line-clamp: $vnpn-iphone_x-notification-body-line-clamp;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
                 }
 
-                .vpnp-notification-body {
-                    margin: 0;
+                .vpnp-notification-content-image {
+                    min-width: $vnpn-iphone_x-notification-content-image-min-width;
+                    height: $vnpn-iphone_x-notification-content-image-height;
+                    margin-left: 2%;
 
-                    display: -webkit-box;
-                    -webkit-line-clamp: $vnpn-iphone_x-notification-body-line-clamp;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
+                    border-radius: $vnpn-iphone_x-notification-content-image-border-radius;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
             }
 

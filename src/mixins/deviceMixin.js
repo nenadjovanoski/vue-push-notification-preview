@@ -6,6 +6,11 @@ import {
 
 export const deviceMixin = {
     props: {
+        image: {
+            type: String,
+            default: ''
+        },
+
         backgroundImage: {
             type: String,
             default: ''
@@ -24,6 +29,16 @@ export const deviceMixin = {
     },
 
     computed: {
+        notificationImageStyle() {
+            if (this.image !== '') {
+                return {
+                    'background-image': `url(${this.image})`
+                }
+            }
+
+            return {};
+        },
+
         backgroundStyle() {
             if (this.backgroundImage !== '') {
                 return {
@@ -57,6 +72,10 @@ export const deviceMixin = {
 
         hasBody() {
             return this.textBody !== '';
+        },
+
+        hasImage() {
+            return this.image !== '';
         },
 
         isExpanded() {

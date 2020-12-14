@@ -28,6 +28,7 @@ $vnpn-iphone_x-notification-application-icon-height: 15px;
 $vnpn-iphone_x-notification-application-icon-background-color: $black;
 $vnpn-iphone_x-notification-application-icon-border-radius: 5px;
 
+
 //-- NOTIFICATION TOGGLES --//
 $vnpn-iphone_x-notification-toggler-cursor: pointer;
 
@@ -40,6 +41,11 @@ $vnpn-iphone_x-notification-content-color: $black;
 //-- NOTIFICATION BODY --//
 $vnpn-iphone_x-notification-body-line-clamp: 4;
 
+
+//-- NOTIFICATION CONTENT IMAGE --//
+$vnpn-iphone_x-notification-content-image-min-width: 20%;
+$vnpn-iphone_x-notification-content-image-height: 45px;
+$vnpn-iphone_x-notification-content-image-border-radius: 5px;
 
 //-- DARK MODE: NOTIFICATION --//
 $vnpn-iphone_x-notification-dark-mode-color: rgba(53, 53, 53, 0.9);
