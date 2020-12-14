@@ -48,7 +48,7 @@
                     </div>
 
                     <div
-                        v-if="hasTitle || textBody"
+                        v-if="hasContent"
                         class="vpnp-notification-content"
                     >
                         <div class="vpnp-notification-content-text">
@@ -128,6 +128,10 @@
                     height: `${this.height}px`,
                     width: `${this.height * (DEVICE_SIZE.PIXEL_4_WIDTH / DEVICE_SIZE.PIXEL_4_HEIGHT)}px`
                 }
+            },
+
+            hasContent() {
+                return this.hasTitle || this.hasBody || this.hasImage;
             }
         }
     }
