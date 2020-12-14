@@ -37,6 +37,7 @@
                         </div>
 
                         <a
+                            v-if="isVisibleToggler"
                             class="vpnp-notification-toggler"
                             @click="toggleNotification"
                         >
@@ -113,6 +114,11 @@
             height: {
                 type: Number,
                 default: DEVICE_SIZE.PIXEL_4_HEIGHT
+            },
+
+            isVisibleToggler: {
+                type: Boolean,
+                default: false
             }
         },
 
