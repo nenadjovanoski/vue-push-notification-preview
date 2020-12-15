@@ -136,8 +136,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    @import '../assets/devices';
-    @import '../assets/devices/pixel_4';
-</style>

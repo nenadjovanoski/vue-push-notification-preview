@@ -7,35 +7,36 @@ $vnpn-pixel_4-content-height: 100%;
 
 //-- HEADER --//
 $vnpn-pixel_4-header-width: 100%;
-$vnpn-pixel_4-header-height: 45%;
+$vnpn-pixel_4-header-height: 45% !default;
 
 
 //-- NOTIFICATION --//
-$vnpn-pixel_4-notification-min-height: 15px;
-$vnpn-pixel_4-notification-padding: 15px;
-$vnpn-pixel_4-notification-border-radius: 5px;
-$vnpn-pixel_4-notification-background-color: $white;
+$vnpn-pixel_4-notification-min-height: 15px !default;
+$vnpn-pixel_4-notification-padding: 15px !default;
+$vnpn-pixel_4-notification-border-radius: 5px  !default;
+$vnpn-pixel_4-notification-background-color: $vnpn-white !default;
 
 
 //-- NOTIFICATION HEADING --//
-$vnpn-pixel_4-notification-heading-font-size: 12px;
-$vnpn-pixel_4-notification-heading-color: #565656;
+$vnpn-pixel_4-notification-heading-font-size: 12px !default;
+$vnpn-pixel_4-notification-heading-color: #565656 !default;
 
 
 //-- NOTIFICATION APPLICATION ICON --//
-$vnpn-pixel_4-notification-application-icon-width: 15px;
-$vnpn-pixel_4-notification-application-icon-height: 15px;
-$vnpn-pixel_4-notification-application-icon-background-color: $black;
-$vnpn-pixel_4-notification-application-icon-border-radius: 50%;
+$vnpn-pixel_4-notification-application-icon-width: 15px !default;
+$vnpn-pixel_4-notification-application-icon-height: 15px !default;
+$vnpn-pixel_4-notification-application-icon-background-color: $vnpn-black !default;
+$vnpn-pixel_4-notification-application-icon-border-radius: 50% !default;
+
 
 //-- NOTIFICATION TOGGLES --//
-$vnpn-pixel_4-notification-toggler-cursor: pointer;
-$vnpn-pixel_4-notification-toggler-color: $black;
+$vnpn-pixel_4-notification-toggler-cursor: pointer !default;
+$vnpn-pixel_4-notification-toggler-color: $vnpn-black !default;
 
 
 //-- NOTIFICATION CONTENT --//
-$vnpn-pixel_4-notification-content-font-size: 13px;
-$vnpn-pixel_4-notification-content-color: $black;
+$vnpn-pixel_4-notification-content-font-size: 13px !default;
+$vnpn-pixel_4-notification-content-color: $vnpn-black !default;
 
 
 //-- NOTIFICATION CONTENT TEXT --//
@@ -45,39 +46,39 @@ $vnpn-pixel_4-notification-content-text-width: 100%;
 
 //-- NOTIFICATION CONTENT IMAGE --//
 $vnpn-pixel_4-notification-content-image-width: 100%;
-$vnpn-pixel_4-notification-content-image-height: 125px;
-$vnpn-pixel_4-notification-content-image-border-radius: 2px;
+$vnpn-pixel_4-notification-content-image-height: 125px !default;
+$vnpn-pixel_4-notification-content-image-border-radius: 2px !default;
 
 //-- EXPANDED SIZE: NOTIFICATION TITLE --//
-$vnpn-pixel_4-notification-expanded-size-title-font-weight: bold;
+$vnpn-pixel_4-notification-expanded-size-title-font-weight: bold !default;
 
 
 //-- NOTIFICATION BODY --//
-$vnpn-pixel_4-notification-body-line-clamp: 4;
+$vnpn-pixel_4-notification-body-line-clamp: 4 !default;
 
 
 //-- LIGHT MODE: NOTIFICATION CONTENT --//
-$vnpn-pixel_4-notification-light-mode-and-content-color: #3b3b3b;
+$vnpn-pixel_4-notification-light-mode-and-content-color: #3b3b3b !default;
 
 
 //-- DARK MODE: NOTIFICATION --//
-$vnpn-pixel_4-notification-dark-mode-background-color: $black;
+$vnpn-pixel_4-notification-dark-mode-background-color: $vnpn-black !default;
 
 
 //-- DARK MODE: NOTIFICATION HEADING --//
-$vnpn-pixel_4-notification-dark-mode-heading-color: $white;
+$vnpn-pixel_4-notification-dark-mode-heading-color: $vnpn-white !default;
 
 
 //-- DARK MODE: NOTIFICATION APPLICATION ICON --//
-$vnpn-pixel_4-notification-dark-mode-application-icon-background-color: $vnpn-pixel_4-notification-dark-mode-heading-color;
+$vnpn-pixel_4-notification-dark-mode-application-icon-background-color: $vnpn-pixel_4-notification-dark-mode-heading-color !default;
 
 //-- DARK MODE: NOTIFICATION TOGGLES --//
-$vnpn-pixel_4-notification-dark-mode-toggler-color: $white;
+$vnpn-pixel_4-notification-dark-mode-toggler-color: $vnpn-white !default;
 
 
 //-- DARK MODE: NOTIFICATION CONTENT --//
-$vnpn-pixel_4-notification-dark-mode-content-color: $white;
+$vnpn-pixel_4-notification-dark-mode-content-color: $vnpn-white !default;
 
 
 //-- DARK MODE & EXPANDED SIZE: NOTIFICATION BODY --//
-$vnpn-pixel_4-notification-dark-mode-and-expanded-size-body-background-color: #e6e6e6;
+$vnpn-pixel_4-notification-dark-mode-and-expanded-size-body-background-color: #e6e6e6 !default;
