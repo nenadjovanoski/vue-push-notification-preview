@@ -19,7 +19,8 @@
   "main": "dist/vue-push-notification-preview.umd.min.js",
   "files": [
     "dist/*",
-    "src/components/*"
+    "src/components/*",
+    "src/assets/*"
   ],
   "repository": {
     "type": "git",
