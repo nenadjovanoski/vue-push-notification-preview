@@ -30,7 +30,7 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js",
+    "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js && rm ./dist/demo.html",
     "publish": "bash npm_publish.sh"
   },
   "devDependencies": {
