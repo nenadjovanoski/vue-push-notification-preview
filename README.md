@@ -9,6 +9,7 @@ A library for previewing push notification on devices.
 - **Android Device Preview**
 - **iOS Device Preview**
 - **🔥 Dark / Light mode notifications**
+- **Customizable with SCSS variables**
 
 ## 🚀 Install
 ```sh
@@ -17,22 +18,24 @@ npm i vue-push-notification-preview
 
 ## 🚦 Quick Setup
 
-#### Register globally
+### Register globally
 Make it available anywhere in your Vue application.
 
 ```js
 import { AndroidPreview, IphonePreview } from 'vue-push-notification-preview';
+import 'vue-push-notification-preview/src/assets/devices.scss';
 
 Vue.component('AndroidPreview', AndroidPreview);
 Vue.component('IphonePreview', IphonePreview);
 ```
 
-#### Register locally
+### Register locally
 Explicitly register it to a component you want to use it in.
 
 ```vue
 <script>
   import { AndroidPreview, IphonePreview } from 'vue-push-notification-preview';
+  import 'vue-push-notification-preview/src/assets/devices.scss';
 
   export default {
     components: {
@@ -44,11 +47,11 @@ Explicitly register it to a component you want to use it in.
 </script>
 ```
 
-### 👨🏻‍🏫 Documentation
+## 👨🏻‍🏫 Documentation
 
 Visit: https://nenadjovanoski.github.io/vue-push-notification-preview/
 
-#### Props
+### Props
 
 All props for `AndroidPreview` component:
 
@@ -65,6 +68,7 @@ All props for `AndroidPreview` component:
 | height                    | Number    | 644 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
 | isVisibleToggler          | Boolean   | false                         | A prop for managing when arrow toggler is visible in notification. |
 
+<br />
 All props for `IphonePreview` component:
 
 | Name                      | Type      | Default                       | Description |
@@ -79,7 +83,7 @@ All props for `IphonePreview` component:
 | backgroundColor           | String    | '#c1c1c1'                     | `backgroundColor` has higher priority over `backgroundImage`. |
 | height                    | Number    | 614 and above (Recommended)   | Device `height` in pixels. The width gets calculated to keep device's ratio. |
 
-#### Events
+### Events
 
 All custom events for `AndroidPreview` and `IphonePreview` components:
 
@@ -89,7 +93,7 @@ All custom events for `AndroidPreview` and `IphonePreview` components:
 | toggle-notification **(Iphone)**      | Click     | Click on **application icon** of notification |
 
 
-#### Slots
+### Slots
 
 All named slots for `AndroidPreview` and `IphonePreview` components:
 
@@ -97,3 +101,13 @@ All named slots for `AndroidPreview` and `IphonePreview` components:
 | Name      | Trigger   | Description                                   |
 | ---       | ---       | ---                                           |
 | header    | Click     | Click on **top right arrow** of notification  |
+
+
+### Styling
+
+Both `AndroidPreview` and `IphonePreview` components can be customized through SCSS variables, by importing the following files:
+
+| Component         | File path                                                         |
+| ---               | ---                                                               |
+| AndroidPreview    | `vue-push-notification-preview/src/assets/devices/pixel_4.scss`   |
+| IphonePreview     | `vue-push-notification-preview/src/assets/devices/iphone_x.scss`  |
