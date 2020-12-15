@@ -110,8 +110,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    @import '../assets/devices';
-    @import '../assets/devices/iphone_x';
-</style>
