@@ -4,7 +4,6 @@
 
 <script>
     import { AndroidPreview } from 'vue-push-notification-preview';
-    import 'vue-push-notification-preview/src/assets/devices/pixel_4.scss';
 
     export default {
         components: {
@@ -14,7 +13,7 @@
 </script>
 
 <style lang="scss">
-    .vpnp-notification-heading {
-        color: #ff0000 !important;
-    }
+    $vnpn-pixel_4-notification-heading-color: #ff0000;
+
+    @import '~vue-push-notification-preview/src/assets/devices/pixel_4';
 </style>

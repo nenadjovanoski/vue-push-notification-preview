@@ -4,7 +4,6 @@
 
 <script>
     import { IphoenPreview } from 'vue-push-notification-preview';
-    import 'vue-push-notification-preview/src/assets/devices/iphone_x.scss';
 
     export default {
         components: {
@@ -14,7 +13,7 @@
 </script>
 
 <style lang="scss">
-    .vpnp-notification-heading {
-        color: #ff0000 !important;
-    }
+    $vnpn-iphone_x-notification-heading-color: #ff0000;
+
+    @import '~vue-push-notification-preview/src/assets/devices/iphone_x';
 </style>

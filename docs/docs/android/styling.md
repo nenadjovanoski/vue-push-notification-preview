@@ -18,6 +18,6 @@ Changing the notification heading text i.e. `$vnpn-pixel_4-notification-heading-
 
 <SourceCode>
 
-<<< @/docs/.vuepress/components/examples/android/styling/notification-heading-text.vue
+<<< @/docs/.vuepress/components/examples/android/styling/source-code/notification-heading-text.vue
 
 </SourceCode>

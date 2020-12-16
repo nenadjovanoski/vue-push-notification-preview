@@ -18,6 +18,6 @@ Changing the notification heading text i.e. `$vnpn-iphone_x-notification-heading
 
 <SourceCode>
 
-<<< @/docs/.vuepress/components/examples/iphone/styling/notification-heading-text.vue
+<<< @/docs/.vuepress/components/examples/iphone/styling/source-code/notification-heading-text.vue
 
 </SourceCode>
