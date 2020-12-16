@@ -7,17 +7,10 @@ All available variables are defined into:
 
 ## Notification Heading Text
 
-Changing the notification heading text i.e. `$vnpn-iphone_x-notification-heading-color` with **#ff0000** color. 
+Changing the notification heading text i.e. `$vnpn-iphone_x-notification-heading-color` with **#ff0000** color.
 
-### Example
-<br>
+```scss
+$vnpn-iphone_x-notification-heading-color: #ff0000;
 
-<Demo componentName="examples/iphone/styling/notification-heading-text" />
-
-### Source Code
-
-<SourceCode>
-
-<<< @/docs/.vuepress/components/examples/iphone/styling/source-code/notification-heading-text.vue
-
-</SourceCode>
+@import '~vue-push-notification-preview/src/assets/devices/iphone_x';
+```

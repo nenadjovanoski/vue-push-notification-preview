@@ -9,15 +9,8 @@ All available variables are defined into:
 
 Changing the notification heading text i.e. `$vnpn-pixel_4-notification-heading-color` with **#ff0000** color. 
 
-### Example
-<br>
+```scss
+$vnpn-pixel_4-notification-heading-color: #ff0000;
 
-<Demo componentName="examples/android/styling/notification-heading-text" />
-
-### Source Code
-
-<SourceCode>
-
-<<< @/docs/.vuepress/components/examples/android/styling/source-code/notification-heading-text.vue
-
-</SourceCode>
+@import '~vue-push-notification-preview/src/assets/variables/pixel_4';
+```
