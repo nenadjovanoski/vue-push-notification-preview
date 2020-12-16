@@ -34,16 +34,24 @@
                     </div>
 
                     <div class="vpnp-notification-content">
-                        <p
-                            v-if="hasTitle"
-                            class="vpnp-notification-title"
-                            v-html="textTitle"
-                        />
+                        <div class="vpnp-notification-content-text">
+                            <p
+                                v-if="hasTitle"
+                                class="vpnp-notification-title"
+                                v-html="textTitle"
+                            />
 
-                        <p
-                            v-if="hasBody"
-                            class="vpnp-notification-body"
-                            v-html="textBody"
+                            <p
+                                v-if="hasBody"
+                                class="vpnp-notification-body"
+                                v-html="textBody"
+                            />
+                        </div>
+
+                        <div
+                            v-if="hasImage"
+                            class="vpnp-notification-content-image"
+                            :style="[ notificationImageStyle ]"
                         />
                     </div>
                 </div>
@@ -102,8 +110,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    @import '../assets/devices';
-    @import '../assets/devices/iphone_x';
-</style>
