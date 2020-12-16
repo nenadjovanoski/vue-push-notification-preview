@@ -39,7 +39,8 @@ module.exports = {
                     children: [
                         'android/props',
                         'android/events',
-                        'android/slots'
+                        'android/slots',
+                        'android/styling'
                     ]
                 },
                 {
@@ -48,7 +49,8 @@ module.exports = {
                     children: [
                         'iphone/props',
                         'iphone/events',
-                        'iphone/slots'
+                        'iphone/slots',
+                        'iphone/styling'
                     ]
                 }
             ]
