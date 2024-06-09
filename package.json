@@ -1,7 +1,7 @@
 {
   "name": "vue-push-notification-preview",
   "description": "A library to preview the push notifications on iOS and Android devices",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "author": "Nenad Jovanoski <jovanoskinenad@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -15,8 +15,10 @@
     "device",
     "ios"
   ],
+  "type": "module",
   "private": false,
-  "main": "dist/vue-push-notification-preview.umd.min.js",
+  "main": "dist/vue-push-notification-preview.umd.cjs",
+  "module": "dist/vue-push-notification-preview.js",
   "files": [
     "dist/*",
     "src/components/*",
@@ -30,19 +32,15 @@
     "url": "https://github.com/nenadjovanoski/vue-push-notification-preview/issues"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-push-notification-preview src/components/index.js && rm ./dist/demo.html",
+    "dev": "vite",
+    "build": "vite build",
     "publish": "bash npm_publish.sh"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "sass": "^1.77.2",
-    "sass-loader": "^14.2.1",
-    "vue": "^2.7.16",
-    "vue-template-compiler": "^2.7.16"
+  "dependencies": {
+    "vue": "^3.4.21"
   },
-  "peerDependencies": {
-    "vue": "^2.6.x"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
   }
 }
