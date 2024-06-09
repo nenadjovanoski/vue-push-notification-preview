@@ -11,6 +11,10 @@ A library for previewing push notification on devices.
 - **🔥 Dark / Light mode notifications**
 - **Customizable with SCSS variables**
 
+## <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" width="25"> Package versions
+- **Vue.js v2 (install package v2)**
+- **Vue.js v3 (install package v3)**
+
 ## 🚀 Install
 ```sh
 npm i vue-push-notification-preview
